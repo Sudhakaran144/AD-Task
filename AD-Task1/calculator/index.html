@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="row1">
+                 <p class="res" ></p>
+            </div>
+            <div class="row1">
+                <button class="btn1" onclick="
+                cal = '';  
+                document.querySelector('.res').innerHTML=` `;
+                ">AC</button>
+                <button class="btn1" onclick="deletevalue()">DE</button>
+                <button class="btn1" onclick="calculation('%')">%</button>
+                <button class="btn1" onclick="calculation('/')">/</button>
+            </div>
+            <div class="row1">
+                <button class="btn1" onclick="calculation('9')">9</button>
+                <button class="btn1" onclick="calculation('8')">8</button>
+                <button class="btn1" onclick="calculation('7')">7</button>
+                <button class="btn1" onclick="calculation('*')">*</button>
+            </div>
+            <div class="row1">
+                <button class="btn1" onclick="calculation('6')">6</button>
+                <button class="btn1" onclick="calculation('5')">5</button>
+                <button class="btn1" onclick="calculation('4')">4</button>
+                <button class="btn1" onclick="calculation('-')">-</button>
+            </div>
+            <div class="row1">
+                <button class="btn1" onclick="calculation('1')">1</button>
+                <button class="btn1" onclick="calculation('2')">2</button>
+                <button class="btn1" onclick="calculation('3')">3</button>
+                <button class="btn1" onclick="calculation('+')">+</button>
+            </div>
+            <div class="row1">
+                <button class="btn1" onclick="calculation('.')">.</button>
+                <button class="btn1" onclick="calculation('0')">0</button>
+                <button class="btn1" onclick="calculation('00')">00</button>
+                <button class="btn1" onclick="
+                cal = Math.floor(eval(cal));
+                document.querySelector('.res').innerHTML=`${cal}`;"
+                >=</button>
+            </div>
+        </div>
+    </div>
+
+<script src="scirpt.js"></script>
+</body>
+</html>

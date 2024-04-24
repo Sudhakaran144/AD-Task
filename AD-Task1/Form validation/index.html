@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form">
+        <h3>Login To Coding Market</h3>
+        <form >
+            <div class="username">
+                <label >Email or Username</label> 
+                <input type="text" placeholder="name" id="name" required autocomplete="off" >
+            </div>      
+            <div class="password">
+                <label >Password</label>
+                <input type="text" id="pass" placeholder="password" required autocomplete="off">
+            </div>
+            <p id="error"></p>
+            <button id="btn" onclick="Submit(event)">Submit</button>
+        </form>
+    </div>
+    <div id="username"></div>
+    <div id="pword"></div>
+    <script>
+
+        function Submit(event){
+            event.preventDefault();
+            const username = document.getElementById("name").value;
+            const password = document.getElementById("pass").value;
+
+            console.log("Username:", username);
+            console.log("Password:", password);
+
+            if (username.length === 0 || username.length < 4 || password.length === 0 || password.length < 4 || password.length > 12) {
+                document.getElementById("error").innerHTML = "Incorrect username or password. please try again";
+            } 
+            else{
+                document.getElementById("error").innerHTML = " "
+            }
+             
+        }
+
+    </script>
+</body>
+</html>
